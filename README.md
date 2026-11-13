@@ -2,6 +2,7 @@
 
 ### Table of content
 - [Project overview](#Project-overview)
+- [Primary Problem Statement](#Primary-Problem-Statement)
 - [Data sources](#Data-sources)
 - [Tools](#Tools)
 - [Data cleaning](#Data-cleaning)
@@ -12,6 +13,8 @@
 ## Project overview
 This dataset contains tracking payment activity, spending patterns, and potential fraud across accounts. Each record represents a single monetary event captured with 11 core attributes. 
 
+## Primary Problem Statement
+The core objective is to predict whether a financial transaction is fraudulent or high-risk (is_flagged) based on its timing, monetary value, account details, and geographic context, while minimizing false positives for legitimate customers.
 ## Data sources
 - Project Jupyter notebook
   
