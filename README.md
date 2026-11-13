@@ -53,8 +53,12 @@ This dataset contains tracking payment activity, spending patterns, and potentia
 2. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
 
 ## Insights
-1. Overall churn rate: 26.54% (1,869 churned customers)
+- Fraud & Risk Management
 
+1. Overall churn rate: 26.54% (1,869 churned customers)
+- Revenue & Growth Analytics
+- Customer Segmentation & Engagement
+- Operational Efficiency
 
 | **Total Customers:** 7043 |
 | --- |
