@@ -52,4 +52,39 @@ This dataset contains tracking payment activity, spending patterns, and potentia
 1. What percentage of total transactions result in a "failed" status, and what is the associated financial impact?
 2. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
 
-   
+## Insights
+1. Overall churn rate: 26.54% (1,869 churned customers)
+
+
+| **Total Customers:** 7043 |
+| --- |
+| **Churned Customers:** 1869 |
+| **Baseline Churn Rate:** 26.54% |
+
+
+
+
+
+Churn Rate by Demographics 
+
+| churn | senior_citizen | dependents |Churn Rate (%) |
+| :--- | :---: | :---: | ---: |
+|0  |  0    |  No     |  29.60 |
+|1  |  0    |  Yes    |  16.05 |
+|2  | 1     |  No     |  32.64 |
+|3  | 1     |  Yes    |  19.78 |
+
+
+
+
+### Services & Product Performance
+
+
+
+
+### Financial Impact & Contract Optimization
+
+
+
+## Recommendations
+
