@@ -1,4 +1,4 @@
-# financial-transactions
+# FINANCIAL TRANSACTIONS
 
 ### Table of content
 - [Project overview](#Project-overview)
@@ -78,15 +78,6 @@ Churn Rate by Demographics
 |2  | 1     |  No     |  32.64 |
 |3  | 1     |  Yes    |  19.78 |
 
-
-
-
-### Services & Product Performance
-
-
-
-
-### Financial Impact & Contract Optimization
 
 
 
