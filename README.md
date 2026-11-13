@@ -32,10 +32,11 @@ This dataset contains tracking payment activity, spending patterns, and potentia
 ### 1. Fraud & Risk Management
 1. What is the overall false positive rate of our fraud flags (is_flagged)?
 2. Which merchant_category or region experiences the highest volume of flagged transactions?
-   a.) The Aggregation and Discovery Pipeline
-   b.) Advanced Multi-Dimensional Insights: Category × Region Matrix
-3. Are there specific account_type segments showing a disproportionate surge in failed or flagged transactions?
-4. What is the total amount currently locked in a "failed" or "completed" status?
+   - The Aggregation and Discovery Pipeline 
+   - Advanced Multi-Dimensional Insights: Category × Region Matrix   
+  
+4. Are there specific account_type segments showing a disproportionate surge in failed or flagged transactions?
+5. What is the total amount currently locked in a "failed" or "completed" status?
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
