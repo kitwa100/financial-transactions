@@ -40,4 +40,16 @@ This dataset contains tracking payment activity, spending patterns, and potentia
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
+2. Which merchant_category driving the highest average order value (AOV)?
+3. What are the top 3 performing region markets by transaction volume and total value?
+4. How does the volume of transaction_type (e.g., deposits vs. withdrawals) fluctuate across different seasons or days of the week?
+### 3. Customer Segmentation & Engagement
+1. How do spending habits (amount and merchant_category) differ between various account_type tiers (e.g., Retail vs. Corporate)?
+2. What is the velocity of transaction_date for our most active account_type?
+3. Which region shows the highest preference for the transaction_type?
 
+### D. Operational Efficiency
+1. What percentage of total transactions result in a "failed" status, and what is the associated financial impact?
+2. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
+
+   
