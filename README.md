@@ -94,18 +94,6 @@ Churn Rate by Demographics
 |3  | 1     |  Yes    |  19.78 |
 
 
-## 4. Geographic & Market Performance
-
-1. Pairing region with volume and status metrics uncovers regional growth opportunities and localized friction.
-2. Regional Volume Share: Rank each region by total transaction count and normalized amount to identify top-performing markets and emerging growth areas.
-3. Cross-Border Activity: Compare region against currency to spot cross-border spending patterns, such as domestic accounts transacting in foreign currencies.
-
-## 5. Operational & Processing Health
-
-1. Evaluating status across different dimensions pinpoints technical bottlenecks or payment failures.
-2. Failure & Decline Rates: Calculate the percentage of transactions with failed, declined, or pending status values. Break this down by region, currency, and merchant_category to isolate processor issues.
-3. Settlement Delays: Track how long transactions remain in a pending status relative to their transaction_date to ensure service-level agreements (SLAs) are met.
-
 ## Recommended Summary Metrics Table
 
 
