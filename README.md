@@ -11,10 +11,19 @@
 - [Recommendations](#Recommendations)
 
 ## Project overview
-This dataset contains tracking payment activity, spending patterns, and potential fraud across accounts. Each record represents a single monetary event captured with 11 core attributes. 
+- This dataset contains tracking payment activity, spending patterns, and potential fraud across accounts. Each record represents a single monetary event captured with 11 core attributes. 
+- A digital banking and cross-border payment provider, noticed a spike in disputed charges and failed settlements over a years window.
+
+### Schema Overview
+
+- Identifiers & Time. transaction_id (Primary Key) and transaction_date (ISO timestamp) track unique events and velocity.
+- Account & Flow. account_type (Checking, Credit, Business, Savings) and transaction_type (Purchase, Transfer, Withdrawal, Refund) define the money movement.
+- Valuation. amount (numeric) and currency (USD, EUR, KES, GBP) capture transaction scale and FX exposure.
+- Context & Risk. merchant_category (e.g., Electronics, Travel, Crypto, Groceries), region (NA, EMEA, APAC, LATAM), status (Completed, Pending, Failed, Reversed), and is_flagged (Boolean) support compliance and risk scoring.
+
 
 ## Primary Problem Statement
-The core objective is to predict whether a financial transaction is fraudulent or high-risk (is_flagged) based on its timing, monetary value, account details, and geographic context, while minimizing false positives for legitimate customers.
+The core objective is to predict whether a financial transaction is fraudulent or high-risk (is_flagged) based on its timing, monetary value, account details, and geographic context, while minimizing false positives for legitimate customers.  As a Data Analyst, you have been given the financial_transactions table to identify fraud patterns, isolate system bottlenecks, and recommend automated rule improvements.
 ## Data sources
 - Project Jupyter notebook
   
