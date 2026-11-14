@@ -60,7 +60,7 @@ The core objective is to predict whether a financial transaction is fraudulent o
 2. What is the velocity of transaction_date for our most active account_type?
 3. Which region shows the highest preference for the transaction_type?
 
-### D. Operational Efficiency
+### 4. Operational Efficiency
 1. What percentage of total transactions result in a "failed" status, and what is the associated financial impact?
 2. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
 
