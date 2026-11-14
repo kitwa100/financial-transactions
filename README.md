@@ -56,11 +56,26 @@ The core objective is to predict whether a financial transaction is fraudulent o
 2. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
 
 ## Insights
-- Fraud & Risk Management
+### - Fraud & Risk Management
+1. Combining is_flagged, amount, region, and status helps you identify suspicious activity and tune your fraud rules.
+2. Flagged Transaction Rate: Divide flagged transactions by total transactions to establish a baseline risk rate. Group this metric by region and merchant_category to spot high-risk clusters.
+3. High-Value Anomaly Detection: Compare amount distributions for is_flagged = True against normal transactions within the same account_type. Look for sudden spikes in transaction size or rapid repeat transactions on the same transaction_date.
+4. False Positive Evaluation: Cross-reference is_flagged with status (e.g., completed vs. blocked). A high volume of flagged transactions that ultimately clear safely indicates overly strict fraud filters.
+<img width="1000" height="1200" alt="revenue and growth" src="https://github.com/user-attachments/assets/f48a1c6f-7928-4170-aa6d-b2c49423105a" />
 
-1. Overall churn rate: 26.54% (1,869 churned customers)
-- Revenue & Growth Analytics
-- Customer Segmentation & Engagement
+### - Revenue & Growth Analytics
+1. Using transaction_date, transaction_type, amount, and currency reveals the overall financial health and seasonality of the accounts.
+2. Net Cash Flow: Subtract outgoing transaction_type totals (debits, withdrawals, fees) from incoming totals (credits, deposits, refunds) over daily, weekly, or monthly windows.
+3. Currency Exposure: Group amount by currency to see which currencies drive the most volume. Normalize all values to a single base currency using historical exchange rates before calculating global totals.
+4. Seasonality & Peak Periods: Aggregate transaction counts and total volume by day of the week or month using transaction_date. This helps forecast liquidity needs and peak processing times.
+<img width="1200" height="1000" alt="segmentation" src="https://github.com/user-attachments/assets/c26d7428-2e2f-4c1d-afb3-22a5d128ae8e" />
+
+### - Customer Segmentation & Engagement
+1. Analyzing account_type alongside spending habits shows how different user tiers use their accounts.
+2. Spend per Account Tier: Calculate the average transaction value (amount) and transaction frequency per account_type (e.g., personal, business, premium).
+3. Category Preferences: Map merchant_category against account_type to see where different segments spend most, such as travel and software for business accounts versus groceries and retail for personal accounts.
+
+
 - Operational Efficiency
 
 | **Total Customers:** 7043 |
@@ -79,45 +94,19 @@ Churn Rate by Demographics
 |3  | 1     |  Yes    |  19.78 |
 
 
-## 1. Risk & Fraud Detection
-
-Combining is_flagged, amount, region, and status helps you identify suspicious activity and tune your fraud rules.
-• Flagged Transaction Rate: Divide flagged transactions by total transactions to establish a baseline risk rate. Group this metric by region and merchant_category to spot high-risk clusters.
-• High-Value Anomaly Detection: Compare amount distributions for is_flagged = True against normal transactions within the same account_type. Look for sudden spikes in transaction size or rapid repeat transactions on the same transaction_date.
-• False Positive Evaluation: Cross-reference is_flagged with status (e.g., completed vs. blocked). A high volume of flagged transactions that ultimately clear safely indicates overly strict fraud filters.
-
-## 2. Revenue & Cash Flow Trends
-
-Using transaction_date, transaction_type, amount, and currency reveals the overall financial health and seasonality of the accounts.
-• Net Cash Flow: Subtract outgoing transaction_type totals (debits, withdrawals, fees) from incoming totals (credits, deposits, refunds) over daily, weekly, or monthly windows.
-• Currency Exposure: Group amount by currency to see which currencies drive the most volume. Normalize all values to a single base currency using historical exchange rates before calculating global totals.
-• Seasonality & Peak Periods: Aggregate transaction counts and total volume by day of the week or month using transaction_date. This helps forecast liquidity needs and peak processing times.
-
-## 3. Customer & Account Segmentation
-
-Analyzing account_type alongside spending habits shows how different user tiers use their accounts.
-• Spend per Account Tier: Calculate the average transaction value (amount) and transaction frequency per account_type (e.g., personal, business, premium).
-• Category Preferences: Map merchant_category against account_type to see where different segments spend most, such as travel and software for business accounts versus groceries and retail for personal accounts.
-
 ## 4. Geographic & Market Performance
 
-Pairing region with volume and status metrics uncovers regional growth opportunities and localized friction.
-• Regional Volume Share: Rank each region by total transaction count and normalized amount to identify top-performing markets and emerging growth areas.
-• Cross-Border Activity: Compare region against currency to spot cross-border spending patterns, such as domestic accounts transacting in foreign currencies.
+1. Pairing region with volume and status metrics uncovers regional growth opportunities and localized friction.
+2. Regional Volume Share: Rank each region by total transaction count and normalized amount to identify top-performing markets and emerging growth areas.
+3. Cross-Border Activity: Compare region against currency to spot cross-border spending patterns, such as domestic accounts transacting in foreign currencies.
 
 ## 5. Operational & Processing Health
 
-Evaluating status across different dimensions pinpoints technical bottlenecks or payment failures.
-• Failure & Decline Rates: Calculate the percentage of transactions with failed, declined, or pending status values. Break this down by region, currency, and merchant_category to isolate processor issues.
-• Settlement Delays: Track how long transactions remain in a pending status relative to their transaction_date to ensure service-level agreements (SLAs) are met.
+1. Evaluating status across different dimensions pinpoints technical bottlenecks or payment failures.
+2. Failure & Decline Rates: Calculate the percentage of transactions with failed, declined, or pending status values. Break this down by region, currency, and merchant_category to isolate processor issues.
+3. Settlement Delays: Track how long transactions remain in a pending status relative to their transaction_date to ensure service-level agreements (SLAs) are met.
 
 ## Recommended Summary Metrics Table
 
-
-Metric	Columns Used	Business Question Answered
-Approval Rate	status, region	Where are payments failing or getting declined most often?
-Fraud Hit Rate	is_flagged, merchant_category	Which merchant types trigger the most security alerts?
-Average Ticket Size	amount, currency, account_type	How much does a typical user spend per transaction in each tier?
-Daily Net Volume	transaction_date, transaction_type, amount	Is money flowing into or out of the system over time?
 
 
