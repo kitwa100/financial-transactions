@@ -67,17 +67,25 @@ The core objective is to predict whether a financial transaction is fraudulent o
   
 3. Are there specific account_type segments showing a disproportionate surge in failed or flagged transactions?
    
-             | Total_transactions | Flagged_count | Flag_rate_% | Surge_factor|
-             |   :---     |   :---:   |   :---:    |   ---:      |
-             |   152      |      2.0  |  1.315789  |    1.052632 |
-             |   176      |      0.0  |   0.000000 |   0.000000  |
-             |   172      |      3.0  |   1.744186 |  1.395349   |
-             |   144      |      1.0  |   0.694444 |   0.555556  |
-             |   156      |      4.0  |   2.564103 |   2.051282  |
-         
+ | Total_transactions | Flagged_count | Flag_rate_%  | Surge_factor |
+| :--- | :---: | :---: | ---: |
+|152  |  2.0    |  1.315789     |  1.052632 |
+|176  |  0.0    |  0.000000    |  0.000000 |
+|172  | 3.0     |  1.744186     |  1.395349 |
+|144  | 1.0     |  0.694444    |  0.555556 |
+|156  | 4.0     |  2.564103   |  2.051282 |        
  <img width="938" height="500" alt="acc_flag" src="https://github.com/user-attachments/assets/6a1aefb4-d505-4c2e-9470-c9bf4576fe27" />
    
 4. What is the total amount currently locked in a "failed" or "completed" status?
+
+
+| **Total Locked Amount (Failed + Completed): $94,530,101.90** |
+
+|  | status | total_amount | 
+| :--- | ---: | 
+| 0  | Completed | 87592061.81 |
+| 1  | Failed | 6938040.09 | 
+
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
