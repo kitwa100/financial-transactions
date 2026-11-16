@@ -43,7 +43,15 @@ The core objective is to predict whether a financial transaction is fraudulent o
 ## Exploratory Data Analysis
 ### 1. Fraud & Risk Management
 1. What is the overall false positive rate of our fraud flags (is_flagged)?
-2. Which merchant_category or region experiences the highest volume of flagged transactions?
+   
+| is_flagged |   |
+| :--- | ---: | 
+| 0.0 | 790  |
+| 1.0 | 10 |
+
+<img width="800" height="500" alt="overall_distribution" src="https://github.com/user-attachments/assets/1c897e1c-d7a1-47a6-8a54-f08f3f25b70d" />
+
+3. Which merchant_category or region experiences the highest volume of flagged transactions?
    - The Aggregation and Discovery Pipeline 
    - Advanced Multi-Dimensional Insights: Category × Region Matrix   
   
