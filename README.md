@@ -54,11 +54,19 @@ The core objective is to predict whether a financial transaction is fraudulent o
 
 
 2. Which merchant_category or region experiences the highest volume of flagged transactions?
-   - The Aggregation and Discovery Pipeline 
-   - Advanced Multi-Dimensional Insights: Category × Region Matrix   
+
+   - The Aggregation and Discovery Pipeline
+           a. Merchant Category Flagged Volume
+<img width="938" height="500" alt="Merchant Category" src="https://github.com/user-attachments/assets/c8cc3a8c-c14e-4f77-b3e8-03cca19a1dc3" />
   
-4. Are there specific account_type segments showing a disproportionate surge in failed or flagged transactions?
-5. What is the total amount currently locked in a "failed" or "completed" status?
+           b. Regional Risk Mapping
+<img width="938" height="500" alt="region_flagged" src="https://github.com/user-attachments/assets/a451790a-12c9-4a32-870b-e23e6b39b355" />
+   - Advanced Multi-Dimensional Insights: Category × Region Matrix   
+
+<img width="938" height="500" alt="multi_dimention" src="https://github.com/user-attachments/assets/8ef97900-f221-40b4-ae6b-eecd2cc1c64f" />
+  
+3. Are there specific account_type segments showing a disproportionate surge in failed or flagged transactions?
+4. What is the total amount currently locked in a "failed" or "completed" status?
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
