@@ -50,8 +50,10 @@ The core objective is to predict whether a financial transaction is fraudulent o
 | 1.0 | 10 |
 
 <img width="800" height="500" alt="overall_distribution" src="https://github.com/user-attachments/assets/1c897e1c-d7a1-47a6-8a54-f08f3f25b70d" />
+<img width="948" height="500" alt="matric_ overall" src="https://github.com/user-attachments/assets/4bdc09e2-477b-4374-a2ed-74ddb5906a64" />
 
-3. Which merchant_category or region experiences the highest volume of flagged transactions?
+
+2. Which merchant_category or region experiences the highest volume of flagged transactions?
    - The Aggregation and Discovery Pipeline 
    - Advanced Multi-Dimensional Insights: Category × Region Matrix   
   
