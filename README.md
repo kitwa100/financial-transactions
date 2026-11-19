@@ -78,7 +78,7 @@ The core objective is to predict whether a financial transaction is fraudulent o
    
 4. What is the total amount currently locked in a "failed" or "completed" status?
 
-| **Total Locked Amount (Failed + Completed): $94,530,101.90**|
+**Total Locked Amount (Failed + Completed): $94,530,101.90**
 
 |  | status | total_amount | 
 | :--- | :---: | ---:|
@@ -90,9 +90,11 @@ The core objective is to predict whether a financial transaction is fraudulent o
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
+
 2. Which merchant_category driving the highest average order value (AOV)?
-3. What are the top 3 performing region markets by transaction volume and total value?
-4. How does the volume of transaction_type (e.g., deposits vs. withdrawals) fluctuate across different seasons or days of the week?
+   
+4. What are the top 3 performing region markets by transaction volume and total value?
+6. How does the volume of transaction_type (e.g., deposits vs. withdrawals) fluctuate across different seasons or days of the week?
 ### 3. Customer Segmentation & Engagement
 1. How do spending habits (amount and merchant_category) differ between various account_type tiers (e.g., Retail vs. Corporate)?
 2. What is the velocity of transaction_date for our most active account_type?
