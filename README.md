@@ -41,6 +41,7 @@ The core objective is to predict whether a financial transaction is fraudulent o
 2. Removing duplicate
 
 ## Exploratory Data Analysis
+
 ### 1. Fraud & Risk Management
 1. What is the overall false positive rate of our fraud flags (is_flagged)?
    
@@ -90,26 +91,41 @@ The core objective is to predict whether a financial transaction is fraudulent o
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
+
+<img width="700" height="500" alt="trans_growth" src="https://github.com/user-attachments/assets/9d180d55-0258-4cfd-a41c-fd39c7738ca1" />
+
+2. Which merchant_category driving the highest average order value (AOV)?
+
    
-        - Failed Transactions: 40 out of 800 (5.00%)
+3. What are the top 3 performing region markets by transaction volume and total value?
+
+   
+4. How does the volume of transaction_type (e.g., deposits vs. withdrawals) fluctuate across different seasons or days of the week?
+
+   
+### 3. Customer Segmentation & Engagement
+
+1. How do spending habits (amount and merchant_category) differ between various account_type tiers (e.g., Retail vs. Corporate)?
+
+   
+2. What is the velocity of transaction_date for our most active account_type?
+
+   
+3. Which region shows the highest preference for the transaction_type?
+
+### 4. Operational Efficiency
+1. What percentage of total transactions result in a "failed" status, and what is the associated financial impact?
+ - Failed Transactions: 40 out of 800 (5.00%)
         - Financial Impact: $6,938,040.09 (6.97% of total volume)
 
 <img width="938" height="500" alt="Financial Impact" src="https://github.com/user-attachments/assets/76aed3aa-00c2-427d-9e18-3bc52a40f81f" />
 
 <img width="938" height="500" alt="bar financial impact" src="https://github.com/user-attachments/assets/12e06cb1-a3a5-4881-a892-0a10f330d8c3" />
 
-2. Which merchant_category driving the highest average order value (AOV)?
-   
-4. What are the top 3 performing region markets by transaction volume and total value?
-6. How does the volume of transaction_type (e.g., deposits vs. withdrawals) fluctuate across different seasons or days of the week?
-### 3. Customer Segmentation & Engagement
-1. How do spending habits (amount and merchant_category) differ between various account_type tiers (e.g., Retail vs. Corporate)?
-2. What is the velocity of transaction_date for our most active account_type?
-3. Which region shows the highest preference for the transaction_type?
+3. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
 
-### 4. Operational Efficiency
-1. What percentage of total transactions result in a "failed" status, and what is the associated financial impact?
-2. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
+
+
 
 ## Insights
 ### - Fraud & Risk Management
