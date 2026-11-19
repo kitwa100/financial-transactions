@@ -87,7 +87,6 @@ The core objective is to predict whether a financial transaction is fraudulent o
 | 1  | Failed | 6938040.09 | 
 
 
-<img width="700" height="500" alt="regional_share" src="https://github.com/user-attachments/assets/6bdd8cfd-76f9-4c6a-a34c-70283ef4ce37" />
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
@@ -112,19 +111,31 @@ The core objective is to predict whether a financial transaction is fraudulent o
 
    
 3. Which region shows the highest preference for the transaction_type?
+   **Highest Preference Region per Transaction Type**
+   
+| transaction_type  |   region  | preference_pct |
+|:--|:--:|--:|
+| Deposit    |  North | 22.12 |
+| Fee  |  Unknown |   100.00 |
+| Purchase   |   South |   21.50 |
+| Refund | North-East  |   19.79 |
+| Transfer   |    West     |      20.31 |
+| Withdrawal  |  Central |    18.02 |
+      
+<img width="700" height="500" alt="regional_share" src="https://github.com/user-attachments/assets/6bdd8cfd-76f9-4c6a-a34c-70283ef4ce37" />
 
 ### 4. Operational Efficiency
 1. What percentage of total transactions result in a "failed" status, and what is the associated financial impact?
- - Failed Transactions: 40 out of 800 (5.00%)
+        - Failed Transactions: 40 out of 800 (5.00%)
         - Financial Impact: $6,938,040.09 (6.97% of total volume)
 
 <img width="938" height="500" alt="Financial Impact" src="https://github.com/user-attachments/assets/76aed3aa-00c2-427d-9e18-3bc52a40f81f" />
 
 <img width="938" height="500" alt="bar financial impact" src="https://github.com/user-attachments/assets/12e06cb1-a3a5-4881-a892-0a10f330d8c3" />
 
-3. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
+2. What is the ratio of inbound to outbound transactions (transaction_type) across transaction_date?
 
-
+<img width="700" height="500" alt="in out bound" src="https://github.com/user-attachments/assets/1f6cbfa6-8634-4792-84d8-a31740207626" />
 
 
 ## Insights
