@@ -78,14 +78,15 @@ The core objective is to predict whether a financial transaction is fraudulent o
    
 4. What is the total amount currently locked in a "failed" or "completed" status?
 
-
-| **Total Locked Amount (Failed + Completed): $94,530,101.90** |
+| **Total Locked Amount (Failed + Completed): $94,530,101.90**|
 
 |  | status | total_amount | 
-| :--- | ---: | 
+| :--- | :---: | ---:|
 | 0  | Completed | 87592061.81 |
 | 1  | Failed | 6938040.09 | 
 
+
+<img width="700" height="500" alt="regional_share" src="https://github.com/user-attachments/assets/6bdd8cfd-76f9-4c6a-a34c-70283ef4ce37" />
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
