@@ -90,6 +90,13 @@ The core objective is to predict whether a financial transaction is fraudulent o
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
+   
+        - Failed Transactions: 40 out of 800 (5.00%)
+        - Financial Impact: $6,938,040.09 (6.97% of total volume)
+
+<img width="938" height="500" alt="Financial Impact" src="https://github.com/user-attachments/assets/76aed3aa-00c2-427d-9e18-3bc52a40f81f" />
+
+<img width="938" height="500" alt="bar financial impact" src="https://github.com/user-attachments/assets/12e06cb1-a3a5-4881-a892-0a10f330d8c3" />
 
 2. Which merchant_category driving the highest average order value (AOV)?
    
