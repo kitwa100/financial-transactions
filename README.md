@@ -90,16 +90,45 @@ The core objective is to predict whether a financial transaction is fraudulent o
 
 ### 2. Revenue & Growth Analytics
 1. What is our transaction_date growth rate in total transaction amount split by currency?
-
 <img width="700" height="500" alt="trans_growth" src="https://github.com/user-attachments/assets/9d180d55-0258-4cfd-a41c-fd39c7738ca1" />
 
 2. Which merchant_category driving the highest average order value (AOV)?
+Highest AOV Category: Unknown ($286,211.84)
+   merchant_category        aov  median_value  transaction_count       std_dev
+9            Unknown  286211.84      62328.65                 41  1.390083e+06
+5            Grocery  169460.90      68073.51                 83  6.386805e+05
+3      Entertainment  157728.88      96269.16                 77  6.181063e+05
+10         Utilities  156858.25      79261.71                 93  7.906672e+05
+8             Travel  132595.70      79138.44                 72  4.913667e+05
+0             Dining  129301.00      74430.69                 68  4.686837e+05
+6         Healthcare   90502.34      74311.08                 69  1.214689e+05
+1          Education   82986.41      57754.25                 75  1.386169e+05
+2        Electronics   79989.18      79388.22                 72  4.112790e+04
+4               Fuel   69988.85      61486.24                 81  4.365862e+04
+7    Online Shopping   69283.35      74461.02                 69  4.335242e+04
+
+<img width="930" height="500" alt="avg order" src="https://github.com/user-attachments/assets/e4ac98bc-006c-46b6-8bed-d25fc4a06ba6" />
 
    
 3. What are the top 3 performing region markets by transaction volume and total value?
+Top 3 Regions by Transaction Volume:
+          region  transaction_volume
+2  International                 133
+7           West                 128
+1           East                 120 
 
-   
+Top 3 Regions by Total Value:
+       region  total_value
+5       South  21751975.80
+0     Central  16469034.91
+4  North-East  14926623.59
+
+<img width="920" height="360" alt="Transaction Volume" src="https://github.com/user-attachments/assets/e0f55310-4a75-4405-b105-6f6b4c0eef46" />
+
+<img width="920" height="500" alt="Total Value" src="https://github.com/user-attachments/assets/200768eb-2e77-48a4-920d-67050215e04a" />
+
 4. How does the volume of transaction_type (e.g., deposits vs. withdrawals) fluctuate across different seasons or days of the week?
+<img width="930" height="500" alt="Over Time by Type" src="https://github.com/user-attachments/assets/5003d5c6-d639-4134-8299-2e5b6d3a28f8" />
 
    
 ### 3. Customer Segmentation & Engagement
