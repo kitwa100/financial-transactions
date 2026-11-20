@@ -99,7 +99,9 @@
 <img width="700" height="500" alt="trans_growth" src="https://github.com/user-attachments/assets/9d180d55-0258-4cfd-a41c-fd39c7738ca1" />
 
 2. Which merchant_category driving the highest average order value (AOV)?
-Highest AOV Category: Unknown ($286,211.84)
+
+**Highest AOV Category: Unknown ($286,211.84)**
+
    merchant_category        aov  median_value  transaction_count       std_dev
 9            Unknown  286211.84      62328.65                 41  1.390083e+06
 5            Grocery  169460.90      68073.51                 83  6.386805e+05
@@ -143,13 +145,15 @@ Top 3 Regions by Total Value:
     - **Data Preparation & Summary Statistics (pandas & numpy)**
 First, clean the data to isolate spending (debits/outflows) if your dataset also includes deposits, and calculate key summary metrics—including the median and IQR (Interquartile Range), which are more reliable than the mean when large outliers skew transaction amounts
 
---- Overall Spending Metrics by Account Type ---
-  account_type  transaction_count  total_spend  mean_spend  median_spend  \
-3       Salary                144  26520040.24   184166.95      62790.70   
-1      Current                176  21503882.74   122181.15      79059.23   
-4      Savings                156  17962963.13   115147.20      72676.21   
-2          NRE                172  16826987.26    97831.32      68252.52   
-0  Credit Card                152  16735877.14   110104.45      75063.10   
+**Overall Spending Metrics by Account Type**
+
+| account_type | transaction_count | total_spend | mean_spend | median_spend |
+|:---|:---:|:---:|:---:|--:|
+| 3    |   Salary       |         144 | 26520040.24 |  184166.95  |    62790.70  | 
+| 1    |  Current       |        176 | 21503882.74 |  122181.15   |   79059.23   |
+| 4   |   Savings       |       156 | 17962963.13 |  115147.20   |   72676.21   |
+| 2   |       NRE       |      172 | 16826987.26  |  97831.32   |   68252.52   |
+| 0   |   Credit Card   |       152 | 16735877.14 |  110104.45   |  75063.10   |
 
      std_dev  p90_spend  
 3  973570.91  133230.28  
