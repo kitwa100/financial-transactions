@@ -102,18 +102,19 @@
 
 **Highest AOV Category: Unknown ($286,211.84)**
 
-   merchant_category        aov  median_value  transaction_count       std_dev
-9            Unknown  286211.84      62328.65                 41  1.390083e+06
-5            Grocery  169460.90      68073.51                 83  6.386805e+05
-3      Entertainment  157728.88      96269.16                 77  6.181063e+05
-10         Utilities  156858.25      79261.71                 93  7.906672e+05
-8             Travel  132595.70      79138.44                 72  4.913667e+05
-0             Dining  129301.00      74430.69                 68  4.686837e+05
-6         Healthcare   90502.34      74311.08                 69  1.214689e+05
-1          Education   82986.41      57754.25                 75  1.386169e+05
-2        Electronics   79989.18      79388.22                 72  4.112790e+04
-4               Fuel   69988.85      61486.24                 81  4.365862e+04
-7    Online Shopping   69283.35      74461.02                 69  4.335242e+04
+|  | merchant_category    |    aov | median_value | transaction_count    |   std_dev |
+|:---|:---:|:---:|:---:|:--:|--:|
+| 9   |         Unknown | 286211.84   |   62328.65        |         41 | 1.390083e+06 |
+| 5   |         Grocery | 169460.90    |  68073.51         |        83 | 6.386805e+05 |
+| 3    |  Entertainment | 157728.88   |   96269.16        |         77 | 6.181063e+05 |
+| 10    |     Utilities | 156858.25   |   79261.71         |        93 | 7.906672e+05 |
+| 8      |       Travel | 132595.70   |   79138.44         |        72 | 4.913667e+05 |
+| 0       |      Dining | 129301.00   |   74430.69          |       68 | 4.686837e+05 |
+| 6    |     Healthcare  | 90502.34   |   74311.08          |       69 | 1.214689e+05 |
+| 1     |     Education  | 82986.41   |   57754.25          |       75 | 1.386169e+05 |
+| 2      |  Electronics  | 79989.18   |   79388.22          |       72 | 4.112790e+04 |
+| 4       |        Fuel  | 69988.85   |   61486.24           |      81 | 4.365862e+04 |
+| 7   | Online Shopping  | 69283.35   |   74461.02            |     69 | 4.335242e+04 |
 
 <img width="930" height="500" alt="avg order" src="https://github.com/user-attachments/assets/e4ac98bc-006c-46b6-8bed-d25fc4a06ba6" />
 
