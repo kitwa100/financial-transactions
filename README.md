@@ -170,14 +170,28 @@ Travel                   30.92     6.30   4.54    3.33     7.63
 Unknown                   1.75     3.55   4.83   35.01     3.23
 Utilities                 7.42     6.92   7.69   34.88     7.32
 
+
+A. Transaction Size Distribution (Box Plot)¶
+A box plot on a logarithmic scale handles extreme outliers well while clearly showing differences in median transaction sizes across accounts.
+
 <img width="930" height="500" alt="Account Type" src="https://github.com/user-attachments/assets/586ee2bf-ac22-4cf6-a7bc-e67253bea82e" />
 
+B. Category Mix Comparison (100% Stacked Bar Chart)¶
+This chart makes it immediately obvious which merchant categories dominate each account type's budget.
+
 <img width="930" height="500" alt="Share of Total" src="https://github.com/user-attachments/assets/b522a1b6-b0c6-418c-a69d-04dcc1f90e17" />
-  
-2. What is the velocity of transaction_date for our most active account_type?
+
+C. Frequency vs. Ticket Size Matrix (Heatmap)¶
+A heatmap highlights exact pockets of high-value spending across categories and accounts.
+
 <img width="930" height="500" alt="Median Transaction" src="https://github.com/user-attachments/assets/c9f82cbe-0591-4844-a2ed-6d5a29e15702" />
+2. What is the velocity of transaction_date for our most active account_type?
+   Most Active Account Type: Current
+Average Velocity: 0.24 transactions/day
+
+<img width="930" height="500" alt="Transaction Velocity" src="https://github.com/user-attachments/assets/6f36ca5e-3eef-4370-967f-f5918590ee8c" />
    
-3. Which region shows the highest preference for the transaction_type?
+4. Which region shows the highest preference for the transaction_type?
    **Highest Preference Region per Transaction Type**
    
 | transaction_type  |   region  | preference_pct |
