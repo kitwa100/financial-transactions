@@ -134,10 +134,48 @@ Top 3 Regions by Total Value:
 ### 3. Customer Segmentation & Engagement
 
 1. How do spending habits (amount and merchant_category) differ between various account_type tiers (e.g., Retail vs. Corporate)?
+    - **Data Preparation & Summary Statistics (pandas & numpy)**
+First, clean the data to isolate spending (debits/outflows) if your dataset also includes deposits, and calculate key summary metrics—including the median and IQR (Interquartile Range), which are more reliable than the mean when large outliers skew transaction amounts
 
-   
+--- Overall Spending Metrics by Account Type ---
+  account_type  transaction_count  total_spend  mean_spend  median_spend  \
+3       Salary                144  26520040.24   184166.95      62790.70   
+1      Current                176  21503882.74   122181.15      79059.23   
+4      Savings                156  17962963.13   115147.20      72676.21   
+2          NRE                172  16826987.26    97831.32      68252.52   
+0  Credit Card                152  16735877.14   110104.45      75063.10   
+
+     std_dev  p90_spend  
+3  973570.91  133230.28  
+1  419242.37  136460.59  
+4  442506.02  138329.72  
+2  326769.88  137015.47  
+0  351141.93  138239.96  
+
+   - **Category Share & Relative Preference**
+Raw totals can be misleading if one account type simply has more users. Normalizing spending as a percentage of each account's total spend reveals true behavioral preferences (e.g., whether Current accounts skew toward utilities/B2B while Credit Card skews toward dining and travel)
+
+--- Percentage of Total Spend by Category ---
+account_type       Credit Card  Current    NRE  Salary  Savings
+merchant_category                                              
+Dining                    5.27    22.56   5.37    4.58     5.24
+Education                15.04     4.17   7.84    1.90     5.49
+Electronics               6.77     6.70   7.30    4.15     4.77
+Entertainment            12.49     6.32   7.09    3.52    36.56
+Fuel                      6.95     2.95   8.00    4.75     7.04
+Grocery                   4.35    26.22  35.84    1.91     6.48
+Healthcare                5.66     8.12   5.96    3.27     9.36
+Online Shopping           3.37     6.20   5.53    2.71     6.87
+Travel                   30.92     6.30   4.54    3.33     7.63
+Unknown                   1.75     3.55   4.83   35.01     3.23
+Utilities                 7.42     6.92   7.69   34.88     7.32
+
+<img width="930" height="500" alt="Account Type" src="https://github.com/user-attachments/assets/586ee2bf-ac22-4cf6-a7bc-e67253bea82e" />
+
+<img width="930" height="500" alt="Share of Total" src="https://github.com/user-attachments/assets/b522a1b6-b0c6-418c-a69d-04dcc1f90e17" />
+  
 2. What is the velocity of transaction_date for our most active account_type?
-
+<img width="930" height="500" alt="Median Transaction" src="https://github.com/user-attachments/assets/c9f82cbe-0591-4844-a2ed-6d5a29e15702" />
    
 3. Which region shows the highest preference for the transaction_type?
    **Highest Preference Region per Transaction Type**
