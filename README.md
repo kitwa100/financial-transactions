@@ -11,7 +11,7 @@
 - [Recommendations](#Recommendations)
 
 ## Project overview
-- This dataset contains tracking payment activity, spending patterns, and potential fraud across the dataset.
+- This dataset contains tracking payment activity, spending patterns, and potential fraud across the dataset. Dataset is structured to support fraud detection, financial operations monitoring, and spending analytics.
 
 ### Schema Overview
 
