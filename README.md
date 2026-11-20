@@ -178,33 +178,20 @@ Raw totals can be misleading if one account type simply has more users. Normaliz
 | account_type   |    Credit Card | Current  |  NRE | Salary | Savings |
 | :--- |:---:|:---:|:---:|:---:|---:|
 | merchant_category |                |     |    |  |   |                      
-|                    | Dining         |           5.27   | 22.56  | 5.37  |  4.58 |    5.24 |
-|                    | Education       |         15.04    | 4.17 |  7.84   | 1.90  |   5.49 |
-|                   | Electronics       |        6.77   |  6.70  | 7.30  |  4.15   |  4.77 |
-|                    |Entertainment      |      12.49    | 6.32  | 7.09  |  3.52  |  36.56 |
-|                     |Fuel               |       6.95 |    2.95  | 8.00  |  4.75  |   7.04 |
-|                       |Grocery           |        4.35  |  26.22 | 35.84   | 1.91 |    6.48 |
-|                   |Healthcare             |   5.66  |   8.12 |  5.96  |  3.27  |   9.36 |
-|                      |Online Shopping      |     3.37   |  6.20  | 5.53  |  2.71   |  6.87 |
-|                       |Travel               |    30.92   |  6.30  | 4.54  |  3.33    | 7.63 |
-|                        |Unknown              |     1.75   |  3.55  | 4.83  | 35.01  |   3.23 |
-|                      |Utilities               |  7.42  |   6.92 |  7.69 |  34.88  |   7.32 |
+| Dining         |           5.27   | 22.56  | 5.37  |  4.58 |    5.24 |
+| Education       |         15.04    | 4.17 |  7.84   | 1.90  |   5.49 |
+| Electronics       |        6.77   |  6.70  | 7.30  |  4.15   |  4.77 |
+|Entertainment      |      12.49    | 6.32  | 7.09  |  3.52  |  36.56 |
+|Fuel               |       6.95 |    2.95  | 8.00  |  4.75  |   7.04 |
+|Grocery           |        4.35  |  26.22 | 35.84   | 1.91 |    6.48 |
+|Healthcare             |   5.66  |   8.12 |  5.96  |  3.27  |   9.36 |
+|Online Shopping      |     3.37   |  6.20  | 5.53  |  2.71   |  6.87 |
+|Travel               |    30.92   |  6.30  | 4.54  |  3.33    | 7.63 |
+|Unknown              |     1.75   |  3.55  | 4.83  | 35.01  |   3.23 |
+|Utilities               |  7.42  |   6.92 |  7.69 |  34.88  |   7.32 |
 
 
---- Percentage of Total Spend by Category ---
-account_type       Credit Card  Current    NRE  Salary  Savings
-merchant_category                                              
-Dining                    5.27    22.56   5.37    4.58     5.24
-Education                15.04     4.17   7.84    1.90     5.49
-Electronics               6.77     6.70   7.30    4.15     4.77
-Entertainment            12.49     6.32   7.09    3.52    36.56
-Fuel                      6.95     2.95   8.00    4.75     7.04
-Grocery                   4.35    26.22  35.84    1.91     6.48
-Healthcare                5.66     8.12   5.96    3.27     9.36
-Online Shopping           3.37     6.20   5.53    2.71     6.87
-Travel                   30.92     6.30   4.54    3.33     7.63
-Unknown                   1.75     3.55   4.83   35.01     3.23
-Utilities                 7.42     6.92   7.69   34.88     7.32
+
 
 A. Transaction Size Distribution (Box Plot)¶
 A box plot on a logarithmic scale handles extreme outliers well while clearly showing differences in median transaction sizes across accounts.
