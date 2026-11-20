@@ -21,11 +21,12 @@
 - Context & Risk. merchant_category (e.g., Electronics, Travel, Crypto, Groceries), region (NA, EMEA, APAC, LATAM), status (Completed, Pending, Failed, Reversed), and is_flagged (Boolean) support compliance and risk scoring.
 
 
-## Primary Problem Statement
-The core objective is to predict whether a financial transaction is fraudulent or high-risk (is_flagged) based on its timing, monetary value, account details, and geographic context, while minimizing false positives for legitimate customers.  
+## Problem Statement
 
-- Background: Financial institutions process thousands of transactions daily across multiple regions, currencies, and account types, making manual review impossible and increasing exposure to fraudulent activity.
+- Background: The core objective is to predict whether a financial transaction is high-risk (is_flagged) based on its timing, monetary value, account details, and geographic context, while minimizing false positives for legitimate customers.  
+
 - Problem: Legitimate transactions are occasionally delayed or declined, while fraudulent transactions slip through unnoticed, leading to direct financial loss and poor customer experience.
+  
 - Objective: Analyze historical transaction patterns—specifically examining amount, merchant_category, region, account_type, and status—to identify the primary drivers behind is_flagged events and build a predictive model or rule-based system to detect high-risk transactions in real time.
 
 ## Data sources
