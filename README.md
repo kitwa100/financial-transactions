@@ -11,8 +11,7 @@
 - [Recommendations](#Recommendations)
 
 ## Project overview
-- This dataset contains tracking payment activity, spending patterns, and potential fraud across accounts. Each record represents a single monetary event captured with 11 core attributes. 
-- A digital banking and cross-border payment provider, noticed a spike in disputed charges and failed settlements over a years window.
+- This dataset contains tracking payment activity, spending patterns, and potential fraud across the dataset.
 
 ### Schema Overview
 
