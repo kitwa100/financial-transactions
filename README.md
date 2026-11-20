@@ -91,6 +91,7 @@
 | 0  | Completed | 87592061.81 |
 | 1  | Failed | 6938040.09 | 
 
+<img width="930" height="500" alt="Total Amount" src="https://github.com/user-attachments/assets/7baa8474-ac4f-4d70-9aaa-b8708f34e50e" />
 
 
 ### 2. Revenue & Growth Analytics
