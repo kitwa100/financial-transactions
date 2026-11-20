@@ -120,17 +120,22 @@
 
    
 3. What are the top 3 performing region markets by transaction volume and total value?
-Top 3 Regions by Transaction Volume:
-          region  transaction_volume
-2  International                 133
-7           West                 128
-1           East                 120 
 
-Top 3 Regions by Total Value:
-       region  total_value
-5       South  21751975.80
-0     Central  16469034.91
-4  North-East  14926623.59
+**Top 3 Regions by Transaction Volume:**
+
+|      |    region | transaction_volume |
+| :--- | :--: | --: |
+| 2 | International   |              133 |
+| 7  |         West    |             128 |
+| 1   |        East     |            120  |
+
+**Top 3 Regions by Total Value:**
+
+|    |   region | total_value |
+|:--- |:--: |--:|
+| 5   |    South |  21751975.80 |
+| 0    | Central | 16469034.91 |
+| 4 | North-East | 14926623.59 |
 
 <img width="920" height="360" alt="Transaction Volume" src="https://github.com/user-attachments/assets/e0f55310-4a75-4405-b105-6f6b4c0eef46" />
 
