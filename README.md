@@ -262,6 +262,10 @@ Across 11 categories, there are 10 total flagged transactions (average: 0.91 fla
 • Low Flag Volume — Travel (1 flag, 10.0%), Grocery (1 flag, 10.0%), & Fuel (1 flag, 10.0%): Each has a single flag (30.0% combined), often tied to location shifts, split/pump holds, or unusual spend sizes.
 • Zero Flags — Dining, Education, Electrics, Healthcare, & Unknown (0 flags each): Five of the 11 categories show no flagged transactions. Notably, Unknown has 0 flags, suggesting merchant categorization is mostly populated rather than falling into an unmapped bucket
 
+
+• Total Flagged Transactions: 10 across 8 tracked regions. Top Flagged Regions (2 each, 20.0% share each): West, South, International, and Central together account for 8 of the 10 flags (80.0%). Lower Flagged Regions (1 each, 10.0% share each): North and East account for 2 flags combined (20.0%). Zero Flagged Regions (0 flags, 0.0% share): Unknown and North East recorded no flagged transactions.
+
+
 **Recommendations**
 
 • Change Evaluation Metrics: Replace raw accuracy with Precision, Recall, F1-Score, and PR-AUC (Precision-Recall Area Under Curve) to measure how well fraud is caught without excessive false alarms.
@@ -282,7 +286,12 @@ Across 11 categories, there are 10 total flagged transactions (average: 0.91 fla
 2. Tighten Controls on Online Shopping & Entertainment: Check for unauthorized subscriptions, unrecognized merchant descriptors, or duplicate digital charges across these two categories.
 3. Calibrate Rule Thresholds: If most flags are legitimate, tune sensitivity rules (such as velocity or amount thresholds) for utilities and recurring subscriptions to cut alert fatigue.
 4. Normalize by Total Volume: Compare flagged counts against total transaction counts and total spend per category to find true flag rates rather than raw counts alone.
-## Recommended Summary Metrics Table
 
+
+• Prioritize Top Regions: Audit flagged transactions in West, South, International, and Central first, as they drive 80.0% of current alerts.
+• Review International Rules: Check cross-border thresholds, FX anomalies, and merchant categories on International transactions, which often carry higher risk or false positives.
+• Normalize with Transaction Volume: Compare flag counts against total transaction volume per region to calculate true flag rates (a region with 2 flags out of 20 transactions is riskier than one with 2 flags out of 5,000).
+• Verify Data Hygiene: Confirm that Unknown and North East are genuinely low-activity or low-risk rather than suffering from missing location tags or routing gaps.
+• Refine Alert Thresholds: Track false-positive rates on the 2-flag regions to avoid rule fatigue while keeping coverage on North and East.
 
 
