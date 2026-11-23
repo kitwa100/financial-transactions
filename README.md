@@ -280,9 +280,28 @@ Key Findings
 • Surge Factor Impact: A surge factor near 2 indicates that flag volume is spiking sharply compared to historical norms, rather than reflecting a steady, predictable baseline.
 • Operational Bottlenecks: High flag concentrations in a single product category typically strain compliance review queues and create friction for legitimate customers trying to access their funds.
 
+The chart shows $87,592,061.81 in completed transactions and $6,938,040.09 in failed transactions, for a combined total of $94,530,101.90.
+
+Key Figures
+
+• Completed Amount: $87,592,061.81 (92.66% of total dollar volume)
+• Failed Amount: $6,938,040.09 (7.34% of total dollar volume)
+• Total Amount: $94,530,101.90
+• Difference (Completed vs. Failed): $80,654,021.72
+
+The transaction data shows a 92.66% completion rate ($87,592,061.81) against a 7.34% failure rate ($6,938,040.09) across $94,530,101.90 in total volume. While overall throughput is strong, nearly $6.94 million in failed volume represents a significant leak in potential revenue.
+
+Key Findings
 
 
+Status	Transaction Volume ($)	Share of Total (%)
+Completed	$87,592,061.81	92.66%
+Failed	$6,938,040.09	7.34%
+Total Volume	$94,530,101.90	100.00%
 
+• High Baseline Reliability. Over nine out of every ten dollars processed successfully, confirming that your core payment infrastructure handles high-value volume reliably.
+• Material Revenue Leakage. A 7.34% failure rate exceeds standard industry benchmarks (typically 2%–5% for digital transactions, depending on region and payment method). Recovering even half of this failed volume would add nearly $3.47 million in realized revenue.
+• Unidentified Failure Drivers. Because aggregate dollar volume does not show why or how transactions failed, a small number of high-value B2B/enterprise declines could be skewing the numbers just as easily as widespread low-value checkout friction.
 
 
 **Recommendations**
@@ -349,3 +368,14 @@ Recommended Actions
 
 • Establish Product-Specific Baselines: Move away from a single 1.25% global benchmark and set tailored risk thresholds for Savings versus Checking or Credit products based on their distinct transaction profiles.
 • Implement Step-Up Authentication: Replace hard transaction blocks with dynamic friction (such as biometric verification or one-time passcodes) for medium-risk savings transfers to protect funds without hurting user experience.
+
+
+Recommendations
+
+• Segment Failures by Root Cause. Break down the $6.94M by error code (e.g., Insufficient Funds, Gateway Timeout, Suspected Fraud, Expired Card) to separate technical drops from customer-side declines.
+• Implement Smart Retries. For soft declines—such as temporary network timeouts or issuer unavailability—deploy automated retry logic spaced over 24 to 72 hours.
+• Audit High-Value Transactions. Filter for failed transactions above your average order value (AOV); large payments frequently trigger false-positive fraud blocks or bank daily limits that require manual outreach or alternative payment rails (e.g., ACH/wire transfer instead of cards).
+• Analyze Channel and Region Performance. Compare failure rates across mobile vs. web, payment gateways, and geographic regions to pinpoint localized technical bottlenecks.
+
+
+
