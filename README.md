@@ -243,8 +243,7 @@ A heatmap highlights exact pockets of high-value spending across categories and 
 
 ## Insights
 ### - Fraud & Risk Management
-- Out of 800 total transactions, 10 (1.25%) are fraudulent (1) and 790 (98.75%) are non-fraudulent (0), creating a 79:1 class imbalance.
-
+- Out of 800 total transactions, 10 (1.25%) are fraudulent (1) and 790 (98.75%) are non-fraudulent (0), creating a 79:1 class imbalance
 - Severe Class Imbalance: Fraud represents only 1.25% of records. A model predicting 0 for every transaction achieves 98.75% accuracy while missing all fraud.
 - Small Fraud Sample Size: Only 10 positive cases exist. Complex machine learning models risk overfitting on such a small fraud count.
 - Operational & Financial Risk: Even a low fraud rate can cause material losses depending on transaction amounts, chargeback fees, and customer impact.
@@ -258,16 +257,7 @@ Recommendations
 • Engineer Fraud Features: Add features such as transaction amount relative to user average, velocity (count/sum over short time windows), new device/location flags, and time-of-day anomalies.
 • Pair Rules with ML: Combine anomaly/rule-based flags (for high-value or high-risk transfers) with model risk scores, and route borderline cases to manual review.
 
-### - Revenue & Growth Analytics
-1. Using transaction_date, transaction_type, amount, and currency reveals the overall financial health and seasonality of the accounts.
-2. Net Cash Flow: Subtract outgoing transaction_type totals (debits, withdrawals, fees) from incoming totals (credits, deposits, refunds) over daily, weekly, or monthly windows.
-3. Currency Exposure: Group amount by currency to see which currencies drive the most volume. Normalize all values to a single base currency using historical exchange rates before calculating global totals.
-4. Seasonality & Peak Periods: Aggregate transaction counts and total volume by day of the week or month using transaction_date. This helps forecast liquidity needs and peak processing times.
 
-### - Customer Segmentation & Engagement
-1. Analyzing account_type alongside spending habits shows how different user tiers use their accounts.
-2. Spend per Account Tier: Calculate the average transaction value (amount) and transaction frequency per account_type (e.g., personal, business, premium).
-3. Category Preferences: Map merchant_category against account_type to see where different segments spend most, such as travel and software for business accounts versus groceries and retail for personal accounts.
 
 
 
