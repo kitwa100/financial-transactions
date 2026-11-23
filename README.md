@@ -266,6 +266,12 @@ Across 11 categories, there are 10 total flagged transactions (average: 0.91 fla
 • Total Flagged Transactions: 10 across 8 tracked regions. Top Flagged Regions (2 each, 20.0% share each): West, South, International, and Central together account for 8 of the 10 flags (80.0%). Lower Flagged Regions (1 each, 10.0% share each): North and East account for 2 flags combined (20.0%). Zero Flagged Regions (0 flags, 0.0% share): Unknown and North East recorded no flagged transactions.
 
 
+Key Findings
+
+• Dispersed Risk Profile: 10 out of 36 possible combinations (approx. 27.8%) contain a flagged transaction, while 26 cells (72.2%) show zero activity.
+• No Single Hotspot: Because no cell exceeds a count of 1, there is no obvious localized outbreak (such as a single compromised merchant or a specific regional attack).
+• Sparse Matrix: The binary nature of the data (0s and 1s) suggests either low overall transaction volume in these segments or an early-stage pattern where anomalies are just beginning to emerge across different vectors.
+
 **Recommendations**
 
 • Change Evaluation Metrics: Replace raw accuracy with Precision, Recall, F1-Score, and PR-AUC (Precision-Recall Area Under Curve) to measure how well fraud is caught without excessive false alarms.
@@ -294,4 +300,19 @@ Across 11 categories, there are 10 total flagged transactions (average: 0.91 fla
 • Verify Data Hygiene: Confirm that Unknown and North East are genuinely low-activity or low-risk rather than suffering from missing location tags or routing gaps.
 • Refine Alert Thresholds: Track false-positive rates on the 2-flag regions to avoid rule fatigue while keeping coverage on North and East.
 
+
+ Analysis Recommendations
+
+1. Normalize by Total Transaction Volume
+• Action: Convert raw counts into a Flagged Rate (\(\text{Flagged Transactions} \div \text{Total Transactions}\)).
+• Why: A count of 1 in a region with 10,000 transactions is negligible noise (0.01%), whereas a count of 1 in a region with 2 transactions represents a 50% anomaly rate.
+2. Look for Marginal Totals (Row & Column Sums)
+• Action: Sum the flags across each row (Merchant Category) and down each column (Geographical Region).
+• Why: Even if individual intersections only have 1 flag, a single merchant category or region might account for 4 or 5 of the 10 total flags, revealing a broader systemic vulnerability.
+3. Inspect Transaction-Level Metadata
+• Action: Pull the underlying records for the 10 specific flagged transactions and compare them across shared attributes (e.g., timestamps, IP addresses, device IDs, or exact dollar amounts).
+• Why: Attackers often test stolen credentials across different regions and merchant types simultaneously ("card testing"). Looking beyond the heatmap dimensions will show if these 10 isolated events are actually linked to a single source.
+4. Adjust Detection Thresholds
+• Action: Review the rules or model sensitivity that triggered these 10 flags.
+• Why: Uniform single-count flags across unrelated categories can sometimes indicate overly sensitive rules generating false positives rather than true financial anomalies.
 
