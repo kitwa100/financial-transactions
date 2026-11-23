@@ -272,6 +272,19 @@ Key Findings
 • No Single Hotspot: Because no cell exceeds a count of 1, there is no obvious localized outbreak (such as a single compromised merchant or a specific regional attack).
 • Sparse Matrix: The binary nature of the data (0s and 1s) suggests either low overall transaction volume in these segments or an early-stage pattern where anomalies are just beginning to emerge across different vectors.
 
+
+
+Key Findings
+
+• Disproportionate Risk: At 2.56%, Savings accounts exceed the 1.25% baseline by 1.31 percentage points, representing a 104.8% relative increase in flagged activity.
+• Surge Factor Impact: A surge factor near 2 indicates that flag volume is spiking sharply compared to historical norms, rather than reflecting a steady, predictable baseline.
+• Operational Bottlenecks: High flag concentrations in a single product category typically strain compliance review queues and create friction for legitimate customers trying to access their funds.
+
+
+
+
+
+
 **Recommendations**
 
 • Change Evaluation Metrics: Replace raw accuracy with Precision, Recall, F1-Score, and PR-AUC (Precision-Recall Area Under Curve) to measure how well fraud is caught without excessive false alarms.
@@ -316,3 +329,23 @@ Key Findings
 • Action: Review the rules or model sensitivity that triggered these 10 flags.
 • Why: Uniform single-count flags across unrelated categories can sometimes indicate overly sensitive rules generating false positives rather than true financial anomalies.
 
+
+
+Recommended Actions
+
+
+1. Immediate Triage (Reduce False Positives)
+
+• Segment True Fraud vs. False Positives: Audit a sample of the 2.56% flagged transactions to determine the exact false-positive ratio.
+• Identify Rule Triggers: Isolate which specific fraud rules (e.g., high-value transfers, unusual IP addresses, or rapid consecutive withdrawals) are firing most frequently on Savings accounts.
+• Whitelist Routine Behavior: Adjust rule thresholds for established customers moving funds between their own linked checking and savings accounts.
+
+2. Medium-Term Investigation (Address Root Causes)
+
+• Analyze the Surge Window: Map the ~2x surge factor against recent product changes, marketing campaigns, or known external credential-stuffing attacks to pinpoint what caused the spike.
+• Review Account Takeover (ATO) Controls: Verify if flagged savings transactions correlate with recent password resets, device changes, or MFA modifications, which strongly indicate genuine ATO attempts.
+
+3. Long-Term Monitoring
+
+• Establish Product-Specific Baselines: Move away from a single 1.25% global benchmark and set tailored risk thresholds for Savings versus Checking or Credit products based on their distinct transaction profiles.
+• Implement Step-Up Authentication: Replace hard transaction blocks with dynamic friction (such as biometric verification or one-time passcodes) for medium-risk savings transfers to protect funds without hurting user experience.
