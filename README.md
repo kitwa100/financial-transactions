@@ -248,7 +248,13 @@ A heatmap highlights exact pockets of high-value spending across categories and 
 - Small Fraud Sample Size: Only 10 positive cases exist. Complex machine learning models risk overfitting on such a small fraud count.
 - Operational & Financial Risk: Even a low fraud rate can cause material losses depending on transaction amounts, chargeback fees, and customer impact.
 
-Recommendations
+
+
+• Primary risk concentration: Utilities accounts for the largest share of alerts (3 of 7, or 42.9%), making it the top priority for review.
+• Secondary risk tiers: Online Shopping and Entertainment tie for second place (2 each, or 28.6% each), together representing 57.1% of all flagged items.
+• Small sample caveat: With only 7 total flagged transactions, single-event shifts can change category rankings quickly.
+
+**Recommendations**
 
 • Change Evaluation Metrics: Replace raw accuracy with Precision, Recall, F1-Score, and PR-AUC (Precision-Recall Area Under Curve) to measure how well fraud is caught without excessive false alarms.
 • Handle Imbalance Carefully:
@@ -259,6 +265,9 @@ Recommendations
 
 
 
+1. Audit Utilities rules: Check if recurring bills, amount spikes, or new payees/account numbers triggered the 3 alerts, and tune thresholds to reduce false positives on legitimate bill payments.
+2. Tighten digital merchant checks: Review velocity limits, device/IP mismatches, and card-not-present rules for Online Shopping and Entertainment.
+3. Track alert precision over time: Log whether each flagged item is confirmed fraud or a false positive, and normalize counts against total transaction volume per category before changing blocking rules.
 
 
 
