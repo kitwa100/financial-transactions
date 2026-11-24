@@ -325,6 +325,31 @@ However, once you share it, here is the framework I will use to analyze your INR
 • Seasonality & Cyclical Patterns: Spotting recurring weekly dips (such as weekends vs. weekdays), monthly salary-day surges (typically the 1st to the 7th in India), or year-over-year shifts between 2023 and 2024.
 • Structural Shifts: Detecting any permanent changes in trend—such as a sudden tightening or widening of the growth rate band in late 2024 or early 2025.
 
+The chart shows the Average Order Value (AOV) across 11 merchant categories, ranked from highest to lowest:
+Unknown: $286,211.84
+Grocery: $169,460.90
+Entertainment: $157,728.88
+Utilities: $156,858.25
+Travel: $132,595.70
+Dining: $129,301.00
+Healthcare: $90,502.34
+Education: $82,986.41
+Electronics: $79,989.18
+Fuel: $69,988.85
+Online Shopping: $69,283.35
+Key takeaways:
+Unknown has the highest AOV by a wide margin ($116,750.94 higher than Grocery, the highest named category).
+Among named categories, Grocery, Entertainment, and Utilities lead, while Fuel and Online Shopping have the lowest AOVs.
+
+
+Key Analytical Findings
+
+• Severe Categorization Blind Spot. The Unknown category ($286,211.84) exceeds the highest named category (Grocery at $169,460.90) by $116,750.94 (+68.9%). In financial transaction datasets, massive uncategorized ticket sizes typically point to B2B invoice payments, wire transfers, institutional settlements, or unmapped Merchant Category Codes (MCCs).
+• Three Distinct Spending Tiers. Excluding "Unknown," the 10 named categories cluster into three clear tiers relative to the named-category median ($109,901.67):
+	• High-Ticket Essentials & Leisure ($156K–$170K). Grocery ($169,460.90), Entertainment ($157,728.88), and Utilities ($156,858.25) lead named spending, likely driven by bulk/commercial supply orders, corporate event bookings, and commercial utility bills.
+	• Mid-Tier Services ($129K–$133K). Travel ($132,595.70) and Dining ($129,301.00) sit just above the overall dataset mean ($129,536.97).
+	• Lower-Ticket & Retail Categories ($69K–$91K). Healthcare ($90,502.34), Education ($82,986.41), Electronics ($79,989.18), Fuel ($69,988.85), and Online Shopping ($69,283.35) trail well behind, with Grocery AOV sitting 2.45x higher than Online Shopping.
+• Missing Volume Context. Because AOV is calculated as Total Revenue ÷ Number of Orders, a high AOV does not automatically equal high total volume. For example, Fuel and Online Shopping have the lowest AOVs (~$69K–$70K), which is expected if they represent high-frequency, everyday transactions rather than rare bulk purchases.
 
 **Recommendations**
 
@@ -409,3 +434,15 @@ Recommendations
 • Smoothing Techniques: Suggesting whether you should pair daily percentage rates with a 7-day or 30-day moving average to filter out daily noise and see the true underlying growth trajectory.
 
 
+
+Strategic Recommendations
+
+1. Audit and Reclassify "Unknown" Transactions (Immediate Priority)
+	• Enrich MCC Data. Pull the raw merchant descriptors, Merchant Category Codes (MCCs), and payment rails (e.g., ACH/wire vs. card) for the "Unknown" bucket. Reclassifying even half of these transactions will prevent major distortion in your reporting.
+	• Separate B2B from Consumer Flows. The six-figure scale across all categories suggests either commercial/institutional volume or a non-USD currency unit. If consumer and commercial transactions are mixed, segment them into separate cohorts so B2B transfers do not skew retail benchmarks.
+2. Pair AOV with Transaction Frequency and Total Volume
+	• Build a 2x2 Matrix. Plot AOV against Transaction Count (or Total Spend) for each category.
+	• Target High-Frequency, Low-AOV Categories. If Online Shopping and Fuel generate high transaction counts, introducing minimum-spend thresholds, bundled offers, or loyalty incentives can meaningfully lift overall volume.
+3. Optimize High-AOV Retention and Risk Controls
+	• Protect Top Named Categories. Because Grocery, Entertainment, and Utilities drive the highest average ticket sizes, ensure payment processing reliability, offer tailored rewards/rebates, and streamline recurring billing for these merchants.
+	• Monitor Fraud & Anomalies. High-value outlier transactions—especially in Unknown, Entertainment, and Electronics—carry higher chargeback and fraud exposure. Verify whether a small handful of extreme outliers are inflating the mean, and consider comparing median order value alongside AOV.
