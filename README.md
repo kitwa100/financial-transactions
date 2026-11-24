@@ -242,6 +242,7 @@ A heatmap highlights exact pockets of high-value spending across categories and 
 
 
 ## Insights
+
 ### - Fraud & Risk Management
 1. Out of 800 total transactions, 10 (1.25%) are fraudulent (1) and 790 (98.75%) are non-fraudulent (0), creating a 79:1 class imbalance. Even a low fraud rate can cause material losses depending on transaction amounts, chargeback fees, and customer impact.
 
@@ -251,27 +252,17 @@ A heatmap highlights exact pockets of high-value spending across categories and 
 
 4. 10 out of 36 possible combinations (approx. 27.8%) contain a flagged transaction, while 26 cells (72.2%) show zero activity. Because no cell exceeds a count of 1, there is no obvious localized outbreak (such as a single compromised merchant or a specific regional attack). The binary nature of the data (0s and 1s) suggests either low overall transaction volume in these segments or an early-stage pattern where anomalies are just beginning to emerge across different vectors.
 
+5. Disproportionate Risk: At 2.56%, Savings accounts exceed the 1.25% baseline by 1.31 percentage points, representing a 104.8% relative increase in flagged activity. Surge Factor Impact: A surge factor near 2 indicates that flag volume is spiking sharply compared to historical norms, rather than reflecting a steady, predictable baseline. Operational Bottlenecks: High flag concentrations in a single product category typically strain compliance review queues and create friction for legitimate customers trying to access their funds.
 
-
-Key Findings
-
-• Disproportionate Risk: At 2.56%, Savings accounts exceed the 1.25% baseline by 1.31 percentage points, representing a 104.8% relative increase in flagged activity.
-• Surge Factor Impact: A surge factor near 2 indicates that flag volume is spiking sharply compared to historical norms, rather than reflecting a steady, predictable baseline.
-• Operational Bottlenecks: High flag concentrations in a single product category typically strain compliance review queues and create friction for legitimate customers trying to access their funds.
-
-The chart shows $87,592,061.81 in completed transactions and $6,938,040.09 in failed transactions, for a combined total of $94,530,101.90.
-
-Key Figures
+6. The chart shows $87,592,061.81 in completed transactions and $6,938,040.09 in failed transactions, for a combined total of $94,530,101.90. The transaction data shows a 92.66% completion rate ($87,592,061.81) against a 7.34% failure rate ($6,938,040.09) across $94,530,101.90 in total volume. While overall throughput is strong, nearly $6.94 million in failed volume represents a significant leak in potential revenue
 
 • Completed Amount: $87,592,061.81 (92.66% of total dollar volume)
 • Failed Amount: $6,938,040.09 (7.34% of total dollar volume)
 • Total Amount: $94,530,101.90
 • Difference (Completed vs. Failed): $80,654,021.72
 
-The transaction data shows a 92.66% completion rate ($87,592,061.81) against a 7.34% failure rate ($6,938,040.09) across $94,530,101.90 in total volume. While overall throughput is strong, nearly $6.94 million in failed volume represents a significant leak in potential revenue.
 
-Key Findings
-
+### - Revenue & Growth Analytics
 
 Status	Transaction Volume ($)	Share of Total (%)
 Completed	$87,592,061.81	92.66%
