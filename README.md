@@ -243,34 +243,13 @@ A heatmap highlights exact pockets of high-value spending across categories and 
 
 ## Insights
 ### - Fraud & Risk Management
-- Out of 800 total transactions, 10 (1.25%) are fraudulent (1) and 790 (98.75%) are non-fraudulent (0), creating a 79:1 class imbalance
-- Severe Class Imbalance: Fraud represents only 1.25% of records. A model predicting 0 for every transaction achieves 98.75% accuracy while missing all fraud.
-- Small Fraud Sample Size: Only 10 positive cases exist. Complex machine learning models risk overfitting on such a small fraud count.
-- Operational & Financial Risk: Even a low fraud rate can cause material losses depending on transaction amounts, chargeback fees, and customer impact.
+1. Out of 800 total transactions, 10 (1.25%) are fraudulent (1) and 790 (98.75%) are non-fraudulent (0), creating a 79:1 class imbalance. Even a low fraud rate can cause material losses depending on transaction amounts, chargeback fees, and customer impact.
 
+2. Across 11 categories, there are 10 total flagged transactions (average: 0.91 flags per category): Utilities (3 flags, 30.0% of all flags): Accounts for the largest share of flagged activity. Recurring bill payments, varying amounts, or third-party billers often trigger rules. Online Shopping (2 flags, 20.0%) & Entertainment (2 flags, 20.0%): Together they represent 40.0% of flagged items. Card-not-present charges, subscriptions, or digital merchants frequently cause alerts. Low Flag Volume — Travel (1 flag, 10.0%), Grocery (1 flag, 10.0%), & Fuel (1 flag, 10.0%): Each has a single flag (30.0% combined), often tied to location shifts, split/pump holds, or unusual spend sizes. Zero Flags — Dining, Education, Electrics, Healthcare, & Unknown (0 flags each): Five of the 11 categories show no flagged transactions. Notably, Unknown has 0 flags, suggesting merchant categorization is mostly populated rather than falling into an unmapped bucket
 
+3. Total Flagged Transactions: 10 across 8 tracked regions. Top Flagged Regions (2 each, 20.0% share each): West, South, International, and Central together account for 8 of the 10 flags (80.0%). Lower Flagged Regions (1 each, 10.0% share each): North and East account for 2 flags combined (20.0%). Zero Flagged Regions (0 flags, 0.0% share): Unknown and North East recorded no flagged transactions.
 
-• Primary risk concentration: Utilities accounts for the largest share of alerts (3 of 7, or 42.9%), making it the top priority for review.
-• Secondary risk tiers: Online Shopping and Entertainment tie for second place (2 each, or 28.6% each), together representing 57.1% of all flagged items.
-• Small sample caveat: With only 7 total flagged transactions, single-event shifts can change category rankings quickly.
-
-
-
-Across 11 categories, there are 10 total flagged transactions (average: 0.91 flags per category):
-• Highest Risk — Utilities (3 flags, 30.0% of all flags): Accounts for the largest share of flagged activity. Recurring bill payments, varying amounts, or third-party billers often trigger rules.
-• Secondary Concentration — Online Shopping (2 flags, 20.0%) & Entertainment (2 flags, 20.0%): Together they represent 40.0% of flagged items. Card-not-present charges, subscriptions, or digital merchants frequently cause alerts.
-• Low Flag Volume — Travel (1 flag, 10.0%), Grocery (1 flag, 10.0%), & Fuel (1 flag, 10.0%): Each has a single flag (30.0% combined), often tied to location shifts, split/pump holds, or unusual spend sizes.
-• Zero Flags — Dining, Education, Electrics, Healthcare, & Unknown (0 flags each): Five of the 11 categories show no flagged transactions. Notably, Unknown has 0 flags, suggesting merchant categorization is mostly populated rather than falling into an unmapped bucket
-
-
-• Total Flagged Transactions: 10 across 8 tracked regions. Top Flagged Regions (2 each, 20.0% share each): West, South, International, and Central together account for 8 of the 10 flags (80.0%). Lower Flagged Regions (1 each, 10.0% share each): North and East account for 2 flags combined (20.0%). Zero Flagged Regions (0 flags, 0.0% share): Unknown and North East recorded no flagged transactions.
-
-
-Key Findings
-
-• Dispersed Risk Profile: 10 out of 36 possible combinations (approx. 27.8%) contain a flagged transaction, while 26 cells (72.2%) show zero activity.
-• No Single Hotspot: Because no cell exceeds a count of 1, there is no obvious localized outbreak (such as a single compromised merchant or a specific regional attack).
-• Sparse Matrix: The binary nature of the data (0s and 1s) suggests either low overall transaction volume in these segments or an early-stage pattern where anomalies are just beginning to emerge across different vectors.
+4. 10 out of 36 possible combinations (approx. 27.8%) contain a flagged transaction, while 26 cells (72.2%) show zero activity. Because no cell exceeds a count of 1, there is no obvious localized outbreak (such as a single compromised merchant or a specific regional attack). The binary nature of the data (0s and 1s) suggests either low overall transaction volume in these segments or an early-stage pattern where anomalies are just beginning to emerge across different vectors.
 
 
 
