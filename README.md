@@ -264,99 +264,29 @@ A heatmap highlights exact pockets of high-value spending across categories and 
 
 ### - Revenue & Growth Analytics
 
-Status	Transaction Volume ($)	Share of Total (%)
-Completed	$87,592,061.81	92.66%
-Failed	$6,938,040.09	7.34%
-Total Volume	$94,530,101.90	100.00%
+1. Over nine out of every ten dollars processed successfully, confirming that your core payment infrastructure handles high-value volume reliably. Material Revenue Leakage. A 7.34% failure rate exceeds standard industry benchmarks (typically 2%–5% for digital transactions, depending on region and payment method). Recovering even half of this failed volume would add nearly $3.47 million in realized revenue. Because aggregate dollar volume does not show why or how transactions failed, a small number of high-value B2B/enterprise declines could be skewing the numbers just as easily as widespread low-value checkout friction.
+   - Status	Transaction Volume ($)	Share of Total (%)
+   - Completed	$87,592,061.81	92.66%
+   - Failed	$6,938,040.09	7.34%
+   - Total Volume	$94,530,101.90	100.00%
+2. This chart shows the daily percentage growth rate of transaction amounts in INR from January 2023 to early 2025. On most days across the two-year period, the daily growth rate stays close to 0%, with only minor fluctuations. Around October 2023 (between Jul 2023 and Jan 2024), there is a single extreme spike exceeding 250,000% (roughly 260,000%). A sharp one-day percentage jump of this scale typically points to a data anomaly, a very small prior-day baseline (such as a low or near-zero transaction total the day before), or a one-off batch.
 
-• High Baseline Reliability. Over nine out of every ten dollars processed successfully, confirming that your core payment infrastructure handles high-value volume reliably.
-• Material Revenue Leakage. A 7.34% failure rate exceeds standard industry benchmarks (typically 2%–5% for digital transactions, depending on region and payment method). Recovering even half of this failed volume would add nearly $3.47 million in realized revenue.
-• Unidentified Failure Drivers. Because aggregate dollar volume does not show why or how transactions failed, a small number of high-value B2B/enterprise declines could be skewing the numbers just as easily as widespread low-value checkout friction.
+3. Identifying extreme positive spikes (e.g., festival seasons like Diwali, end-of-quarter surges, or payday cycles) and sharp negative drops (e.g., system downtimes, policy changes, or post-holiday slumps). Checking if the daily percentage growth rate hovers steadily around a 0% mean (indicating predictable, mature volume) or shows high daily variance. Seasonality & Cyclical Patterns: Spotting recurring weekly dips (such as weekends vs. weekdays), monthly salary-day surges (typically the 1st to the 7th in India), or year-over-year shifts between 2023 and 2024. Structural Shifts: Detecting any permanent changes in trend—such as a sudden tightening or widening of the growth rate band in late 2024 or early 2025.
 
+4. The Unknown category ($286,211.84) exceeds the highest named category (Grocery at $169,460.90) by $116,750.94 (+68.9%). In financial transaction datasets, massive uncategorized ticket sizes typically point to B2B invoice payments, wire transfers, institutional settlements, or unmapped Merchant Category Codes (MCCs). Three Distinct Spending Tiers. Excluding "Unknown," the 10 named categories cluster into three clear tiers relative to the named-category median ($109,901.67): High-Ticket Essentials & Leisure ($156K–$170K). Grocery ($169,460.90), Entertainment ($157,728.88), and Utilities ($156,858.25) lead named spending, likely driven by bulk/commercial supply orders, corporate event bookings, and commercial utility bills. Mid-Tier Services ($129K–$133K). Travel ($132,595.70) and Dining ($129,301.00) sit just above the overall dataset mean ($129,536.97). Lower-Ticket & Retail Categories ($69K–$91K). Healthcare ($90,502.34), Education ($82,986.41), Electronics ($79,989.18), Fuel ($69,988.85), and Online Shopping ($69,283.35) trail well behind, with Grocery AOV sitting 2.45x higher than Online Shopping.
 
+## Recommendations
 
+1. Change Evaluation Metrics: Replace raw accuracy with Precision, Recall, F1-Score, and PR-AUC (Precision-Recall Area Under Curve) to measure how well fraud is caught without excessive false alarms. Use Stratified K-Fold cross-validation so every fold retains the ~1.25% fraud rate.
+2. Check if recurring bills, amount spikes, or new payees/account numbers triggered the 3 alerts, and tune thresholds to reduce false positives on legitimate bill payments. Tighten digital merchant checks: Review velocity limits, device/IP mismatches, and card-not-present rules for Online Shopping and Entertainment. Track alert precision over time: Log whether each flagged item is confirmed fraud or a false positive, and normalize counts against total transaction volume per category before changing blocking rules.
 
-This chart shows the daily percentage growth rate of transaction amounts in INR from January 2023 to early 2025.
+3. Review the 3 flagged utility transactions to separate false positives (e.g., seasonal usage spikes or auto-pay retries) from real anomalies or billing errors. Check for unauthorized subscriptions, unrecognized merchant descriptors, or duplicate digital charges across these two categories. If most flags are legitimate, tune sensitivity rules (such as velocity or amount thresholds) for utilities and recurring subscriptions to cut alert fatigue. Compare flagged counts against total transaction counts and total spend per category to find true flag rates rather than raw counts alone.
 
-Key Observations
+4. Audit flagged transactions in West, South, International, and Central first, as they drive 80.0% of current alerts. Check cross-border thresholds, FX anomalies, and merchant categories on International transactions, which often carry higher risk or false positives.
+Normalize with Transaction Volume: Compare flag counts against total transaction volume per region to calculate true flag rates (a region with 2 flags out of 20 transactions is riskier than one with 2 flags out of 5,000). Confirm that Unknown and North East are genuinely low-activity or low-risk rather than suffering from missing location tags or routing gaps. Track false-positive rates on the 2-flag regions to avoid rule fatigue while keeping coverage on North and East.
 
-• Baseline Stability: On most days across the two-year period, the daily growth rate stays close to 0%, with only minor fluctuations.
-• Major Outlier Spike: Around October 2023 (between Jul 2023 and Jan 2024), there is a single extreme spike exceeding 250,000% (roughly 260,000%).
-• Possible Causes: A sharp one-day percentage jump of this scale typically points to a data anomaly, a very small prior-day baseline (such as a low or near-zero transaction total the day before), or a one-off batch/settlement surge
-
-
-It looks like you didn't attach or include the chart! Because I can't see the visual data yet, I can't give you the exact findings from your specific dataset.
-However, once you share it, here is the framework I will use to analyze your INR transaction growth chart and generate actionable recommendations:
-
-1. What I Will Look For (Findings)
-
-• Volatility & Outliers: Identifying extreme positive spikes (e.g., festival seasons like Diwali, end-of-quarter surges, or payday cycles) and sharp negative drops (e.g., system downtimes, policy changes, or post-holiday slumps).
-• Baseline Stability: Checking if the daily percentage growth rate hovers steadily around a 0% mean (indicating predictable, mature volume) or shows high daily variance.
-• Seasonality & Cyclical Patterns: Spotting recurring weekly dips (such as weekends vs. weekdays), monthly salary-day surges (typically the 1st to the 7th in India), or year-over-year shifts between 2023 and 2024.
-• Structural Shifts: Detecting any permanent changes in trend—such as a sudden tightening or widening of the growth rate band in late 2024 or early 2025.
-
-The chart shows the Average Order Value (AOV) across 11 merchant categories, ranked from highest to lowest:
-Unknown: $286,211.84
-Grocery: $169,460.90
-Entertainment: $157,728.88
-Utilities: $156,858.25
-Travel: $132,595.70
-Dining: $129,301.00
-Healthcare: $90,502.34
-Education: $82,986.41
-Electronics: $79,989.18
-Fuel: $69,988.85
-Online Shopping: $69,283.35
-Key takeaways:
-Unknown has the highest AOV by a wide margin ($116,750.94 higher than Grocery, the highest named category).
-Among named categories, Grocery, Entertainment, and Utilities lead, while Fuel and Online Shopping have the lowest AOVs.
-
-
-Key Analytical Findings
-
-• Severe Categorization Blind Spot. The Unknown category ($286,211.84) exceeds the highest named category (Grocery at $169,460.90) by $116,750.94 (+68.9%). In financial transaction datasets, massive uncategorized ticket sizes typically point to B2B invoice payments, wire transfers, institutional settlements, or unmapped Merchant Category Codes (MCCs).
-• Three Distinct Spending Tiers. Excluding "Unknown," the 10 named categories cluster into three clear tiers relative to the named-category median ($109,901.67):
-	• High-Ticket Essentials & Leisure ($156K–$170K). Grocery ($169,460.90), Entertainment ($157,728.88), and Utilities ($156,858.25) lead named spending, likely driven by bulk/commercial supply orders, corporate event bookings, and commercial utility bills.
-	• Mid-Tier Services ($129K–$133K). Travel ($132,595.70) and Dining ($129,301.00) sit just above the overall dataset mean ($129,536.97).
-	• Lower-Ticket & Retail Categories ($69K–$91K). Healthcare ($90,502.34), Education ($82,986.41), Electronics ($79,989.18), Fuel ($69,988.85), and Online Shopping ($69,283.35) trail well behind, with Grocery AOV sitting 2.45x higher than Online Shopping.
-• Missing Volume Context. Because AOV is calculated as Total Revenue ÷ Number of Orders, a high AOV does not automatically equal high total volume. For example, Fuel and Online Shopping have the lowest AOVs (~$69K–$70K), which is expected if they represent high-frequency, everyday transactions rather than rare bulk purchases.
-
-**Recommendations**
-
-• Change Evaluation Metrics: Replace raw accuracy with Precision, Recall, F1-Score, and PR-AUC (Precision-Recall Area Under Curve) to measure how well fraud is caught without excessive false alarms.
-• Handle Imbalance Carefully:
-	• Start with class weights (e.g., class_weight='balanced') or threshold tuning rather than heavy synthetic oversampling (like SMOTE) on only 10 fraud cases.
-	• Use Stratified K-Fold cross-validation so every fold retains the ~1.25% fraud rate.
-• Engineer Fraud Features: Add features such as transaction amount relative to user average, velocity (count/sum over short time windows), new device/location flags, and time-of-day anomalies.
-• Pair Rules with ML: Combine anomaly/rule-based flags (for high-value or high-risk transfers) with model risk scores, and route borderline cases to manual review.
-
-
-
-1. Audit Utilities rules: Check if recurring bills, amount spikes, or new payees/account numbers triggered the 3 alerts, and tune thresholds to reduce false positives on legitimate bill payments.
-2. Tighten digital merchant checks: Review velocity limits, device/IP mismatches, and card-not-present rules for Online Shopping and Entertainment.
-3. Track alert precision over time: Log whether each flagged item is confirmed fraud or a false positive, and normalize counts against total transaction volume per category before changing blocking rules.
-
-
-1. Audit Utilities First: Review the 3 flagged utility transactions to separate false positives (e.g., seasonal usage spikes or auto-pay retries) from real anomalies or billing errors.
-2. Tighten Controls on Online Shopping & Entertainment: Check for unauthorized subscriptions, unrecognized merchant descriptors, or duplicate digital charges across these two categories.
-3. Calibrate Rule Thresholds: If most flags are legitimate, tune sensitivity rules (such as velocity or amount thresholds) for utilities and recurring subscriptions to cut alert fatigue.
-4. Normalize by Total Volume: Compare flagged counts against total transaction counts and total spend per category to find true flag rates rather than raw counts alone.
-
-
-• Prioritize Top Regions: Audit flagged transactions in West, South, International, and Central first, as they drive 80.0% of current alerts.
-• Review International Rules: Check cross-border thresholds, FX anomalies, and merchant categories on International transactions, which often carry higher risk or false positives.
-• Normalize with Transaction Volume: Compare flag counts against total transaction volume per region to calculate true flag rates (a region with 2 flags out of 20 transactions is riskier than one with 2 flags out of 5,000).
-• Verify Data Hygiene: Confirm that Unknown and North East are genuinely low-activity or low-risk rather than suffering from missing location tags or routing gaps.
-• Refine Alert Thresholds: Track false-positive rates on the 2-flag regions to avoid rule fatigue while keeping coverage on North and East.
-
-
- Analysis Recommendations
-
-1. Normalize by Total Transaction Volume
-• Action: Convert raw counts into a Flagged Rate (\(\text{Flagged Transactions} \div \text{Total Transactions}\)).
-• Why: A count of 1 in a region with 10,000 transactions is negligible noise (0.01%), whereas a count of 1 in a region with 2 transactions represents a 50% anomaly rate.
-2. Look for Marginal Totals (Row & Column Sums)
-• Action: Sum the flags across each row (Merchant Category) and down each column (Geographical Region).
+5. Convert raw counts into a Flagged Rate (\(\text{Flagged Transactions} \div \text{Total Transactions}\)).
+• Why: A count of 1 in a region with 10,000 transactions is negligible noise (0.01%), whereas a count of 1 in a region with 2 transactions represents a 50% anomaly rate. Sum the flags across each row (Merchant Category) and down each column (Geographical Region).
 • Why: Even if individual intersections only have 1 flag, a single merchant category or region might account for 4 or 5 of the 10 total flags, revealing a broader systemic vulnerability.
 3. Inspect Transaction-Level Metadata
 • Action: Pull the underlying records for the 10 specific flagged transactions and compare them across shared attributes (e.g., timestamps, IP addresses, device IDs, or exact dollar amounts).
