@@ -243,8 +243,21 @@ A heatmap highlights exact pockets of high-value spending across categories and 
 
 ## Insights
 
+1. Fraud & Risk Management
 
+2. Revenue & Growth Analytics
+
+3. Customer Segmentation & Engagement
+
+4. Operational Efficiency
 
 
 ## Recommendations
 
+1. Fraud & Risk Management
+
+2. Revenue & Growth Analytics
+
+3. Customer Segmentation & Engagement
+
+4. Operational Efficiency
